@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+/* Custom Keyframes */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bounce-slow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes fadeIn {
+              from { opacity: 0; transform: translateY(4px); }
+              to { opacity: 1; transform: translateY(0); }
+}
+
+/* Custom Animation Classes */
+.animate-spin-slow {
+  animation: spin-slow 12s linear infinite;
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 4s ease-in-out infinite;
+}
+
+/* Optional: Smooth Hover Transition for Icons */
+.icon-container-hover:hover {
+  transform: scale(1.1);
+  background-color: #f5f3ff; /* matches bg-indigo-50 */
+}
